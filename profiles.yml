@@ -4,10 +4,10 @@ dbt_gcp_project:
     dev:
       type: bigquery
       method: service-account
-      project: quickstart-1590760905088 # name of the project in BigQuery
-      dataset: dbt_yourname # your dataset for development (usually your name)
+      project: andrew-learns-gcp # name of the project in BigQuery
+      dataset: dbt_andrew # your dataset for development (usually your name)
       threads: 4
-      keyfile: /secrets/dbt-gp-project-key
+      keyfile: /secrets/andrew-learns-gcp-key
       timeout_seconds: 300
       priority: interactive
       retries: 1
@@ -15,10 +15,10 @@ dbt_gcp_project:
     prod: # your production environment
       type: bigquery
       method: service-account
-      project: quickstart-1590760905088 # name of the project in BigQuery
+      project: quickstart # name of the project in BigQuery
       dataset: dbt_production # your dataset for production
       threads: 4
-      keyfile: /secrets/dbt-service-keyfile
+      keyfile: /secrets/andrew-learns-gcp-key
       timeout_seconds: 300
       priority: interactive
       retries: 1
