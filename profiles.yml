@@ -1,0 +1,24 @@
+dbt_gcp_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: quickstart-1590760905088 # name of the project in BigQuery
+      dataset: dbt_yourname # your dataset for development (usually your name)
+      threads: 4
+      keyfile: /secrets/dbt-service-keyfile
+      timeout_seconds: 300
+      priority: interactive
+      retries: 1
+
+    prod: # your production environment
+      type: bigquery
+      method: service-account
+      project: quickstart-1590760905088 # name of the project in BigQuery
+      dataset: dbt_production # your dataset for production
+      threads: 4
+      keyfile: /secrets/dbt-service-keyfile
+      timeout_seconds: 300
+      priority: interactive
+      retries: 1
