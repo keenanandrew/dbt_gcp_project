@@ -6,6 +6,7 @@ dbt_gcp_project:
       method: service-account
       project: andrew-learns-gcp-403022 # name of the project in BigQuery
       dataset: bigquery-public-data.crypto_bitcoin # your dataset for development (usually your name)
+      location: EU
       threads: 4
       keyfile: /secrets/andrew-learns-gcp-key
       timeout_seconds: 300
@@ -17,6 +18,7 @@ dbt_gcp_project:
       method: service-account
       project: andrew-learns-gcp-403022 # name of the project in BigQuery
       dataset: bigquery-public-data.crypto_bitcoin # your dataset for production
+      location: EU
       threads: 4
       keyfile: /secrets/andrew-learns-gcp-key
       timeout_seconds: 300
